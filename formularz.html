@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Formularz danych</h2>
+
+  <form action="#" method="post">
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" name="imie" required>
+
+    <label for="nazwisko">Nazwisko:</label>
+    <input type="text" id="nazwisko" name="nazwisko" required>
+
+    <label for="data-urodzenia">Data urodzenia:</label>
+    <div style="display: flex; gap: 10px; margin-top: 5px;">
+    <input type="number" id="dzien" name="dzien" min="1" max="31" required>
+    <select name="miesiąc" required>
+    <option value="">Miesiąc</option>
+    <option value="1">Styczeń</option>
+    <option value="2">Luty</option>
+    <option value="3">Marzec</option>
+    <option value="4">Kwiecień</option>
+    <option value="5">Maj</option>
+    <option value="6">Czerwiec</option>
+    <option value="7">Lipiec</option>
+    <option value="8">Sierpień</option>
+    <option value="9">Wrzesień</option>
+    <option value="10">październik</option>
+    <option value="11">Listopad</option>
+    <option value="12">Grudzień</option>
+    </select>
+    <input type="number" id="rok" name="rok" min="1900" max="2025" required>
+    </div>
+
+    <label for="haslo">Hasło:</label>
+    <input type="password" id="haslo" name="haslo"
+       placeholder="Hasło (min 8 znaków)"
+       pattern="[A-Za-z\d]{8,}"
+       title="Hasło musi mieć minimum 8 znaków"
+       required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="plec">Płeć:</label>
+    <select id="plec" name="plec" required>
+      <option value="">Wybierz...</option>
+      <option value="kobieta">Kobieta</option>
+      <option value="mezczyzna">Mężczyzna</option>
+      <option value="inna">Inna</option>
+    </select>
+
+    <label for="uwagi">Uwagi:</label>
+    <textarea id="uwagi" name="uwagi" rows="4"></textarea>
+
+    <label for="telefon">Numer telefonu:</label>
+    <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="9 cyfr" required>
+
+     <div style="display: flex; gap: 10px; margin-top: 20px;">
+  <button type="submit">Wyślij</button>
+
+  <a href="index.html"
+     style="background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;">
+    Powrót
+  </a>
+</div>
+  </form>
+
+</body>
+</html>
