@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Formularz</title>
+</head>
+<body>
+
+  <h2>Formularz danych</h2>
+
+  <form action="#" method="post">
+
+    <label for="imie">Imię:</label><br>
+    <input type="text" id="imie" name="imie" required><br><br>
+
+    <label for="nazwisko">Nazwisko:</label><br>
+    <input type="text" id="nazwisko" name="nazwisko" required><br><br>
+
+    <label for="data-urodzenia">Data urodzenia:</label><br>
+    <input type="number" id="dzien" name="dzien" min="1" max="31" required>
+    <select name="miesiąc" required>
+      <option value="">Miesiąc</option>
+      <option value="1">Styczeń</option>
+      <option value="2">Luty</option>
+      <option value="3">Marzec</option>
+      <option value="4">Kwiecień</option>
+      <option value="5">Maj</option>
+      <option value="6">Czerwiec</option>
+      <option value="7">Lipiec</option>
+      <option value="8">Sierpień</option>
+      <option value="9">Wrzesień</option>
+      <option value="10">Październik</option>
+      <option value="11">Listopad</option>
+      <option value="12">Grudzień</option>
+    </select>
+    <input type="number" id="rok" name="rok" min="1900" max="2025" required><br><br>
+
+    <label for="haslo">Hasło:</label><br>
+    <input type="password" id="haslo" name="haslo"
+      placeholder="Hasło (min 8 znaków)"
+      pattern="[A-Za-z\d]{8,}"
+      title="Hasło musi mieć minimum 8 znaków"
+      required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="plec">Płeć:</label><br>
+    <select id="plec" name="plec" required>
+      <option value="">Wybierz...</option>
+      <option value="kobieta">Kobieta</option>
+      <option value="mezczyzna">Mężczyzna</option>
+      <option value="inna">Inna</option>
+    </select><br><br>
+
+    <label for="uwagi">Uwagi:</label><br>
+    <textarea id="uwagi" name="uwagi" rows="4"></textarea><br><br>
+
+    <label for="telefon">Numer telefonu:</label><br>
+    <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="9 cyfr" required><br><br>
+
+    <button type="submit">Wyślij</button>
+    <a href="Zadanie2.html">Powrót</a>
+
+  </form>
+
+</body>
+</html>
