@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Podgląd faktury</title>
+</head>
+<body>
+
+<script>
+function loadXMLDoc(filename) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.open("GET", filename, false);
+    xhttp.send("");
+    return xhttp.responseXML;
+}
+
+let xml = loadXMLDoc("faktura.xml");
+let xsl = loadXMLDoc("faktura.xsl");
+
+if (document.implementation && document.implementation.createDocument) {
+    let xsltProcessor = new XSLTProcessor();
+    xsltProcessor.importStylesheet(xsl);
+
+    let resultDocument = xsltProcessor.transformToFragment(xml, document);
+    document.body.appendChild(resultDocument);
+}
+</script>
+
+</body>
+</html>

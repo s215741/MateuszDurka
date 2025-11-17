@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="faktura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numer" type="xs:string"/>
+                <xs:element name="data" type="xs:date"/>
+                <xs:element name="sprzedawca" type="podmiot"/>
+                <xs:element name="nabywca" type="podmiot"/>
+                <xs:element name="pozycje">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="pozycja" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nazwa" type="xs:string"/>
+                                        <xs:element name="ilosc" type="xs:integer"/>
+                                        <xs:element name="cena" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="podmiot">
+        <xs:sequence>
+            <xs:element name="nazwa" type="xs:string"/>
+            <xs:element name="nip" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faktura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="faktura.xsd">
+
+    <numer>FV/2025/001</numer>
+    <data>2025-11-15</data>
+
+    <sprzedawca>
+        <nazwa>Firma Testowa</nazwa>
+        <nip>1234567890</nip>
+    </sprzedawca>
+
+    <nabywca>
+        <nazwa>Klient XYZ</nazwa>
+        <nip>9876543210</nip>
+    </nabywca>
+
+    <pozycje>
+        <pozycja>
+            <nazwa>Produkt A</nazwa>
+            <ilosc>2</ilosc>
+            <cena>50</cena>
+        </pozycja>
+
+        <pozycja>
+            <nazwa>Produkt B</nazwa>
+            <ilosc>1</ilosc>
+            <cena>120</cena>
+        </pozycja>
+    </pozycje>
+
+</faktura>
