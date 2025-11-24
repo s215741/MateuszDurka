@@ -1,0 +1,1 @@
+chcemy napisac program ktory generuje siatke nxm, conajmniej 5x5. Chcemy kolorwac komorki tej siatko w zaleznosci od wspolrzednych korzystamy z tego za pomoca ascii. komorki ktorych suma wspolrzednych jest parzysta - '#', nieparzysta = '*'. komorki na glownej przekatnej maja byc oznaczone jakos '@'
